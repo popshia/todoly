@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <div class="mt-6 px-6 py-6 bg-gray-100 rounded-xl">
+        <h2 class="mb-4 text-2xl text-left font-semibold">Incomplete Todos</h2>
+        <div class="grid gap-3">
+            {% for project in projects %}
+                <h2 class="text-2xl">{{ project.name }}</h2>
+                {% for todo in project.todos.all %}
+                    <div>
+                        <a href="#">
+                            <div class="p-3 bg-white rounded-xl">
+                                <h2 class="text-2xl">{{ todo.title }}</h2>
+                                <p class="text-gray-500">Due date: {{ todo.due_date }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="mt-6 px-6 py-6 bg-gray-100 rounded-xl">
+        <h2 class="mb-4 text-2xl text-left font-semibold">Projects</h2>
+        <div class="grid grid-cols-3 gap-3">
+            {% for project in projects %}
+                <div>
+                    <a href="#">
+                        <div class="p-3 bg-white rounded-xl">
+                            <h2 class="text-2xl">{{ project.name }}</h2>
+                            <p class="text-gray-500">{{ project.todos.count }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
