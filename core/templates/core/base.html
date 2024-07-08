@@ -10,25 +10,25 @@
         | Human Resources</title>
     </head>
     <body>
-        <nav class="px-6 py-6 flex justify-between items-center border-b border-gray-200">
+        <nav class="flex items-center justify-between border-b border-gray-200 px-6 py-6">
             <a href="/"
                class="text-4xl font-bold">My Todos</a>
             <div class="space-x-6">
                 <a href="#"
-                   class="text-xl font-semibold hover:text-grey-500">New Todo</a>
+                   class="hover:text-grey-500 text-xl font-semibold">New Todo</a>
                 <a href="#"
-                   class="text-xl font-semibold hover:text-grey-500">All Todos</a>
+                   class="hover:text-grey-500 text-xl font-semibold">All Todos</a>
                 <a href="#"
-                   class="px-6 py-3 text-xl font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
+                   class="rounded-xl bg-teal-500 px-6 py-3 text-xl font-semibold text-white hover:bg-teal-700">Sign up</a>
                 <a href="#"
-                   class="px-6 py-3 text-xl font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Log in</a>
+                   class="rounded-xl bg-gray-500 px-6 py-3 text-xl font-semibold text-white hover:bg-gray-700">Log in</a>
             </div>
         </nav>
         <div class="px-6 pb-6">
             {% block content %}{% endblock %}
         </div>
-        <footer class="py-6 px-6 flex justify-between bg-gray-800">
-            <div class="w-2/3 pr-100">
+        <footer class="flex justify-between bg-gray-800 px-6 py-6">
+            <div class="pr-100 w-2/3">
                 <h3 class="mb-5 font-semibold text-gray-400">About</h3>
                 <p class="text-lg text-gray-500">
                     This is the about area, I'm currently learning django, tailwindcss, vue.js.
